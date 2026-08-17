@@ -1,12 +1,12 @@
 :root {
-  --color-ink: #2C3B29;
-  --color-sage: #8A9A83;
-  --color-sage-light: #A5B39F;
-  --color-ivory: #FAF9F6;
-  --color-ivory-deep: #F1F2ED;
-  --color-accent: #C2A878;
-  --color-text: #414A3E;
-  --color-text-soft: #6D786A;
+  --color-ink: #2C3B29;          /* Verde bosque muy oscuro */
+  --color-sage: #8A9A83;         /* Verde Salvia Pantone 5773C */
+  --color-sage-light: #A5B39F;   
+  --color-ivory: #FAF9F6;        /* Fondo base claro cálido */
+  --color-ivory-deep: #F1F2ED;   /* Tinte sutil para tarjetas en secciones claras */
+  --color-accent: #C2A878;       /* Dorado mate / Arena */
+  --color-text: #414A3E;         /* Texto principal oscuro */
+  --color-text-soft: #6D786A;    /* Texto secundario claro */
   --color-white: #FFFFFF;
 
   --font-display: 'Cormorant Garamond', serif;
@@ -33,7 +33,11 @@ button { font-family: inherit; cursor: pointer; }
 .section-title { font-family: var(--font-display); font-size: 2.5rem; font-weight: 500; text-align: center; color: var(--color-ink); }
 .section-subtitle { text-align: center; font-size: 0.95rem; color: var(--color-text-soft); margin-top: 0.8rem; font-weight: 500; line-height: 1.5;}
 
-.section-icon { width: 55px; height: auto; margin: 0 auto 1.2rem; opacity: 0.85; display: block; }
+/* Títulos y subtítulos cuando la sección es de fondo oscuro/verde */
+.section-dark .section-title { color: var(--color-white); }
+.section-dark .section-subtitle { color: rgba(255, 255, 255, 0.8); }
+
+.section-icon { width: 55px; height: auto; margin: 0 auto 1.2rem; opacity: 0.9; display: block; filter: brightness(0) invert(1); }
 
 .hero { position: relative; min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: var(--color-white); padding: 2rem 1.5rem; overflow: hidden; }
 .hero__bg { position: absolute; inset: 0; background-size: cover; background-position: center; background-color: var(--color-ink); transform: scale(1.06); }
@@ -57,6 +61,12 @@ button { font-family: inherit; cursor: pointer; }
 
 section { padding: var(--section-pad-y) var(--section-pad-x); }
 
+/* --- SECCIONES CON CONTRASTE (Fondo Verde Oliva / Oscuro) --- */
+.section-dark {
+  background-color: var(--color-ink);
+  color: var(--color-white);
+}
+
 /* --- VERSÍCULO --- */
 .verse-section { text-align: center; padding-top: 3rem; padding-bottom: 2rem; }
 .verse-quote { font-family: var(--font-display); font-style: italic; font-size: 1.5rem; line-height: 1.4; color: var(--color-ink); }
@@ -64,7 +74,7 @@ section { padding: var(--section-pad-y) var(--section-pad-x); }
 
 /* --- CARRUSEL NOSOTROS --- */
 .about { text-align: center; padding-top: 1rem; padding-bottom: 1rem;}
-.carousel { position: relative; width: 100%; max-width: 340px; margin: 1.5rem auto 0; aspect-ratio: 4/5; border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 12px 30px rgba(44, 59, 41, 0.15); }
+.carousel { position: relative; width: 100%; max-width: 340px; margin: 1.5rem auto 0; aspect-ratio: 4/5; border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25); }
 .carousel__track { width: 100%; height: 100%; position: relative; }
 .carousel__slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity 1s ease-in-out; }
 .carousel__slide.active { opacity: 1; z-index: 1; }
@@ -80,31 +90,36 @@ section { padding: var(--section-pad-y) var(--section-pad-x); }
 .col-text p { font-size: 0.85rem; line-height: 1.6; color: var(--color-ink); text-align: left; }
 @media (max-width: 380px) { .two-columns { flex-direction: column; text-align: center; } .col-text p { text-align: center; } }
 
-/* --- TARJETA UBICACIÓN --- */
+/* --- TARJETA UBICACIÓN (Sección Oscura) --- */
 .itinerary { padding-top: 2rem; }
-.event-card { margin-top: 1rem; padding: 2rem 1.5rem; background: var(--color-white); border-radius: var(--radius-lg); border: 1px solid rgba(138, 154, 131, 0.3); text-align: center;}
+.event-card { margin-top: 1rem; padding: 2rem 1.5rem; background: rgba(255, 255, 255, 0.05); border-radius: var(--radius-lg); border: 1px solid rgba(138, 154, 131, 0.3); text-align: center; backdrop-filter: blur(5px);}
 .event-card__tag { display: inline-block; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--color-sage); font-weight: 600; margin-bottom: 0.8rem; }
-.event-card__title { font-family: var(--font-display); font-size: 1.8rem; font-weight: 600; color: var(--color-ink); line-height: 1.1;}
-.event-card__address { margin-top: 0.6rem; font-size: 0.9rem; color: var(--color-text-soft); line-height: 1.4;}
-.schedule-timeline { margin: 1.5rem 0; padding: 1rem 0; border-top: 1px solid var(--color-ivory-deep); border-bottom: 1px solid var(--color-ivory-deep); }
-.schedule-item { font-size: 0.95rem; color: var(--color-ink); margin: 0.4rem 0; }
-.schedule-item strong { color: var(--color-sage); }
+.event-card__title { font-family: var(--font-display); font-size: 1.8rem; font-weight: 600; color: var(--color-white); line-height: 1.1;}
+.event-card__address { margin-top: 0.6rem; font-size: 0.9rem; color: rgba(255, 255, 255, 0.8); line-height: 1.4;}
+.schedule-timeline { margin: 1.5rem 0; padding: 1rem 0; border-top: 1px solid rgba(255, 255, 255, 0.15); border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
+.schedule-item { font-size: 0.95rem; color: var(--color-white); margin: 0.4rem 0; }
+.schedule-item strong { color: var(--color-sage-light); }
 .event-card__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-top: 1.25rem; }
 
 /* --- BOTONES --- */
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.85rem 1.3rem; border-radius: 999px; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; border: 1px solid transparent; transition: 0.25s; }
 .btn--primary { background: var(--color-sage); color: var(--color-white); }
 .btn--outline { background: transparent; border-color: var(--color-sage); color: var(--color-sage); }
+.section-dark .btn--outline { border-color: var(--color-sage-light); color: var(--color-sage-light); }
 .btn--full { width: 100%; padding: 1rem 1.3rem; }
 
 /* --- DRESS CODE --- */
 .dresscode { text-align: center; padding-top: 1rem;}
 .dresscode__type { margin-top: 0.5rem; font-family: var(--font-display); font-style: italic; font-size: 1.5rem; color: var(--color-sage); }
+.section-dark .dresscode__type { color: var(--color-sage-light); }
 .dresscode-rules { display: flex; gap: 1rem; margin-top: 2rem; }
 .rule-box { flex: 1; background: var(--color-ivory-deep); padding: 1.5rem 1rem; border-radius: var(--radius-md); display: flex; flex-direction: column; align-items: center;}
-.rule-icon { width: 45px; height: 45px; margin-bottom: 1rem; opacity: 0.8;}
+.section-dark .rule-box { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(138, 154, 131, 0.2); }
+.rule-icon { width: 45px; height: 45px; margin-bottom: 1rem; opacity: 0.9; filter: brightness(0) invert(1); }
 .rule-box h4 { font-family: var(--font-display); font-size: 1.3rem; color: var(--color-ink); margin-bottom: 0.5rem; }
+.section-dark .rule-box h4 { color: var(--color-white); }
 .rule-box p { font-size: 0.75rem; color: var(--color-text-soft); line-height: 1.4; }
+.section-dark .rule-box p { color: rgba(255, 255, 255, 0.8); }
 
 /* --- RECOMENDACIONES --- */
 .recommendations { padding-top: 1rem; }
@@ -113,17 +128,17 @@ section { padding: var(--section-pad-y) var(--section-pad-x); }
 .rec-item p { font-size: 0.85rem; line-height: 1.5; color: var(--color-text-soft); text-align: left; }
 .rec-item strong { color: var(--color-ink); }
 
-/* --- REGALOS --- */
+/* --- REGALOS (Sección Oscura) --- */
 .gifts { text-align: center; padding-top: 1rem; }
-.gift-card { margin-top: 1.5rem; padding: 2.5rem 1.5rem; background: var(--color-ivory-deep); border-radius: var(--radius-lg); border: 1px solid rgba(138, 154, 131, 0.3); }
-.gift-card__text { font-size: 0.9rem; line-height: 1.6; color: var(--color-text-soft); }
-.gift-card__text strong { color: var(--color-ink); }
+.gift-card { margin-top: 1.5rem; padding: 2.5rem 1.5rem; background: rgba(255, 255, 255, 0.05); border-radius: var(--radius-lg); border: 1px solid rgba(138, 154, 131, 0.3); backdrop-filter: blur(5px); }
+.gift-card__text { font-size: 0.9rem; line-height: 1.6; color: rgba(255, 255, 255, 0.85); }
+.gift-card__text strong { color: var(--color-white); }
 
 /* --- RSVP --- */
 .rsvp { padding-top: 2rem; text-align: center;}
-.footer { text-align: center; padding: 3rem 1.5rem 4rem; background: var(--color-ivory); color: var(--color-ink); }
-.footer__names { font-family: var(--font-display); font-style: italic; font-size: 1.6rem; }
+.footer { text-align: center; padding: 3rem 1.5rem 4rem; background: var(--color-ink); color: var(--color-white); border-top: 1px solid rgba(255, 255, 255, 0.1); }
+.footer__names { font-family: var(--font-display); font-style: italic; font-size: 1.6rem; color: var(--color-white); }
 
-.float-bar { position: fixed; left: 50%; bottom: 1.25rem; transform: translateX(-50%); z-index: 50; display: flex; gap: 0.6rem; padding: 0.5rem; background: rgba(44, 59, 41, 0.95); border-radius: 999px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25); }
+.float-bar { position: fixed; left: 50%; bottom: 1.25rem; transform: translateX(-50%); z-index: 50; display: flex; gap: 0.6rem; padding: 0.5rem; background: rgba(44, 59, 41, 0.95); border-radius: 999px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25); border: 1px solid rgba(255, 255, 255, 0.15); }
 .float-btn { width: 46px; height: 46px; border-radius: 50%; display: flex; align-items: center; justify-content: center; background: transparent; border: none; color: var(--color-ivory); font-size: 1.2rem;}
 #music-toggle[aria-pressed="true"] { background: var(--color-sage); color: var(--color-white); }
