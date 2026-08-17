@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Nuestra Boda</title>
+<title>Nuestra Boda | Daya & Rodri</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -17,17 +17,14 @@
     <div class="hero__bg" style="background-image: url('./assets/fondo-hero.jpg');"></div>
     <div class="hero__overlay"></div>
 
-    <img src="./assets/flor-esquina-01.png" alt="" class="hero__floral hero__floral--top reveal" data-reveal>
-    <img src="./assets/flor-esquina-02.png" alt="" class="hero__floral hero__floral--bottom reveal" data-reveal>
-
     <div class="hero__content">
-      <p class="eyebrow reveal" data-reveal>Nos casamos</p>
+      <p class="eyebrow reveal" data-reveal>Nuestra Boda</p>
       <h1 class="hero__names reveal" data-reveal>
-        <span>Camila</span>
+        <span>Daya</span>
         <span class="hero__amp">&amp;</span>
-        <span>Andrés</span>
+        <span>Rodri</span>
       </h1>
-      <p class="hero__date reveal" data-reveal>14 · marzo · 2027</p>
+      <p class="hero__date reveal" data-reveal>11 · octubre · 2026</p>
 
       <div class="countdown reveal" data-reveal aria-live="polite">
         <div class="countdown__item"><span class="countdown__number" id="cd-days">00</span><span class="countdown__label">Días</span></div>
@@ -35,10 +32,22 @@
         <div class="countdown__item"><span class="countdown__number" id="cd-minutes">00</span><span class="countdown__label">Min</span></div>
         <div class="countdown__item"><span class="countdown__number" id="cd-seconds">00</span><span class="countdown__label">Seg</span></div>
       </div>
+      
+      <!-- Indicación de música -->
+      <p class="music-hint reveal" data-reveal>
+        🎵 Presiona el botón flotante para escuchar nuestra canción<br>
+        <em>(Lo arriero todo - Bruno Mars)</em>
+      </p>
     </div>
   </section>
 
-  <div class="divider reveal" data-reveal><img src="./assets/flor-divisor.png" alt="" class="divider__img"></div>
+  <!-- VERSÍCULO -->
+  <section class="verse-section" id="versiculo">
+    <p class="verse-quote reveal" data-reveal>
+      “Mejor dos que uno solo, pues tienen mejor recompensa por su trabajo. Porque si caen, el uno levantará a su compañero. Pero, ¡ay del que cae cuando no hay otro que lo levante!”
+    </p>
+    <p class="verse-ref reveal" data-reveal>Eclesiastés 4:9-10 RVA2015</p>
+  </section>
 
   <!-- NOSOTROS (Carrusel) -->
   <section class="about" id="nosotros">
@@ -46,7 +55,6 @@
     
     <div class="carousel reveal" data-reveal>
       <div class="carousel__track" id="carousel-track">
-        <!-- IMPORTANTE: Nombra tus fotos exactamente así en la carpeta assets -->
         <img src="./assets/nosotros-1.jpg" alt="Foto 1" class="carousel__slide active">
         <img src="./assets/nosotros-2.jpg" alt="Foto 2" class="carousel__slide">
         <img src="./assets/nosotros-3.jpg" alt="Foto 3" class="carousel__slide">
@@ -55,24 +63,37 @@
       </div>
       <div class="carousel__indicators" id="carousel-indicators"></div>
     </div>
-
-    <p class="story__quote reveal" data-reveal>
-      "Dos caminos que se encuentran, un mismo destino: crecer juntos, reír siempre y amarnos sin medida. Gracias por ser parte de nuestra historia."
-    </p>
   </section>
 
-  <div class="divider reveal" data-reveal><img src="./assets/flor-divisor.png" alt="" class="divider__img"></div>
+  <!-- SECCIÓN DOS COLUMNAS (Foto y Texto de Historia) -->
+  <section class="two-columns reveal" data-reveal id="historia-dios">
+    <div class="col-img">
+      <img src="./assets/foto-especial.jpg" alt="Daya y Rodri juntos">
+    </div>
+    <div class="col-text">
+      <p>Dios hizo posible que nos encontráramos y decidió unir nuestras historias en una sola. Hoy celebramos el verdadero y más puro amor que hemos decidido cuidar, proteger y compartir por el resto de nuestras vidas con Jesús como centro de nuestro matrimonio.</p>
+    </div>
+  </section>
 
   <!-- UBICACIÓN & CRONOGRAMA -->
   <section class="itinerary" id="ubicacion">
-    <h2 class="section-title reveal" data-reveal>Celebración</h2>
-    <p class="section-subtitle reveal" data-reveal>Así viviremos este día juntos</p>
-
+    <h2 class="section-title reveal" data-reveal>Reserva la fecha</h2>
+    <p class="section-subtitle reveal" data-reveal>Octubre 11 / 2026</p>
+    
     <article class="event-card reveal" data-reveal>
-      <span class="event-card__tag">01 — Ceremonia</span>
-      <h3 class="event-card__title">Parroquia Nuestra Señora</h3>
-      <p class="event-card__time">4:00 PM</p>
-      <p class="event-card__address">Cra. 43A #10-12, Medellín</p>
+      <span class="event-card__tag">Ubicación</span>
+      <h3 class="event-card__title">Finca #75 Jehova Shalom</h3>
+      <p class="event-card__address">Vereda Las Cuchillas<br>Rionegro, Antioquia</p>
+      
+      <div class="schedule-timeline">
+        <div class="schedule-item">
+          <strong>3:00 PM</strong> — Ceremonia
+        </div>
+        <div class="schedule-item">
+          <strong>6:00 PM</strong> — Recepción
+        </div>
+      </div>
+
       <div class="event-card__actions">
         <!-- PEGA AQUÍ TU LINK DE GOOGLE MAPS -->
         <a class="btn btn--outline" target="_blank" href="ENLACE_CORTO_DE_GOOGLE_MAPS_AQUI">
@@ -80,52 +101,74 @@
         </a>
       </div>
     </article>
-
-    <article class="event-card reveal" data-reveal>
-      <span class="event-card__tag">02 — Recepción</span>
-      <h3 class="event-card__title">Hacienda El Encanto</h3>
-      <p class="event-card__time">6:30 PM</p>
-      <p class="event-card__address">Km 3 Vía Las Palmas</p>
-      <div class="event-card__actions">
-         <!-- PEGA AQUÍ TU LINK DE GOOGLE MAPS -->
-        <a class="btn btn--outline" target="_blank" href="ENLACE_CORTO_DE_GOOGLE_MAPS_AQUI">
-          📍 Ver en Google Maps
-        </a>
-      </div>
-    </article>
   </section>
-
-  <div class="divider reveal" data-reveal><img src="./assets/flor-divisor.png" alt="" class="divider__img"></div>
 
   <!-- CÓDIGO DE VESTIMENTA -->
   <section class="dresscode" id="vestimenta">
-    <h2 class="section-title reveal" data-reveal>Código de vestimenta</h2>
-    <p class="dresscode__type reveal" data-reveal>Formal</p>
-    <p class="dresscode__note reveal" data-reveal>Sugerimos evitar el blanco y verde salvia, reservados para la novia.</p>
-    <div class="palette reveal" data-reveal>
-      <span class="palette__dot" style="--dot:#3A4735;" title="Verde Bosque"></span>
-      <span class="palette__dot" style="--dot:#8A9A83;" title="Salvia"></span>
-      <span class="palette__dot" style="--dot:#C2A878;" title="Dorado"></span>
-      <span class="palette__dot" style="--dot:#E0D8C3;" title="Arena"></span>
+    <h2 class="section-title reveal" data-reveal>Dress Code</h2>
+    <p class="dresscode__type reveal" data-reveal>Etiqueta Formal</p>
+    
+    <div class="dresscode-rules reveal" data-reveal>
+      <!-- Regla Mujeres -->
+      <div class="rule-box">
+        <img src="./assets/icono-mujer.png" alt="Vestido" class="rule-icon">
+        <h4>Mujeres</h4>
+        <p>No usar color blanco, ni beige. El color verde olivo está reservado para damas de honor.</p>
+      </div>
+      
+      <!-- Regla Hombres -->
+      <div class="rule-box">
+        <img src="./assets/icono-hombre.png" alt="Traje" class="rule-icon">
+        <h4>Hombres</h4>
+        <p>No usar color beige.</p>
+      </div>
     </div>
   </section>
 
-  <div class="divider reveal" data-reveal><img src="./assets/flor-divisor.png" alt="" class="divider__img"></div>
+  <!-- RECOMENDACIONES -->
+  <section class="recommendations" id="recomendaciones">
+    <h2 class="section-title reveal" data-reveal>Recomendaciones generales</h2>
+    
+    <div class="rec-list reveal" data-reveal>
+      <div class="rec-item">
+        <p><strong>Llegar a las 2:30 PM</strong> para tener tiempo de la acomodación en orden antes de la ceremonia.</p>
+      </div>
+      <div class="rec-item">
+        <p>Si bien amamos a los niños, celebraremos un <strong>evento solo para adultos</strong>. Para mantener un ambiente tranquilo y cómodo durante la ceremonia y recepción, te agradecemos no traer niños. Les agradecemos su comprensión.</p>
+      </div>
+      <div class="rec-item">
+        <p>Usar el celular en <strong>modo vibración</strong> para no interrumpir la ceremonia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGALOS -->
+  <section class="gifts" id="regalos">
+    <h2 class="section-title reveal" data-reveal>Sugerencia de regalos</h2>
+    <div class="gift-card reveal" data-reveal>
+      <p class="gift-card__text">
+        Tu presencia en nuestra boda es el mejor regalo que podemos recibir.<br><br>
+        Si deseas hacernos un regalo, un aporte en efectivo será muy apreciado por nosotros. Durante la recepción tendremos un buzón de <strong>lluvia de sobres</strong> especial donde podrás depositar el tuyo.
+      </p>
+    </div>
+  </section>
 
   <!-- RSVP GOOGLE FORMS -->
   <section class="rsvp" id="rsvp">
-    <img src="./assets/flor-divisor.png" alt="" class="rsvp__floral reveal" data-reveal>
-    <h2 class="section-title reveal" data-reveal>Confirmar asistencia</h2>
-    <p class="section-subtitle reveal" data-reveal>Por favor confírmanos antes del 14 de febrero de 2027</p>
+    <h2 class="section-title reveal" data-reveal>Confirma tu asistencia</h2>
+    <p class="section-subtitle reveal" data-reveal>
+      Es muy importante que confirmes si podrás acompañarnos en este momento tan especial para nosotros. Por favor ingresa al siguiente formulario.<br><br>
+      <strong>Confirmar antes del 28 de agosto.</strong>
+    </p>
     <br>
     <!-- PEGA AQUÍ TU LINK DEL FORMULARIO DE GOOGLE -->
     <a href="ENLACE_A_TU_GOOGLE_FORMS_AQUI" class="btn btn--primary btn--full reveal" data-reveal target="_blank">
-      Llenar formulario de asistencia
+      Llenar formulario
     </a>
   </section>
 
   <footer class="footer">
-    <p class="footer__names">Camila &amp; Andrés</p>
+    <p class="footer__names">Daya &amp; Rodri</p>
   </footer>
 </div>
 
