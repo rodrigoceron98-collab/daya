@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Camila & Andrés | Nos Casamos</title>
+<meta name="description" content="Invitación digital de boda de Camila & Andrés — 14 de marzo de 2027">
+
+<!-- Google Fonts: Cormorant Garamond (títulos) + Montserrat (cuerpo) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ FRAME (da el efecto "tarjeta" en pantallas grandes) ============ -->
+<div class="page-frame">
+
+  <!-- ============ HERO / PORTADA ============ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg" style="background-image: url('assets/fondo-hero.jpg');"></div>
+    <div class="hero__overlay"></div>
+
+    <!-- Ramos de acuarela decorativos (PNG con fondo transparente) -->
+    <img src="assets/flor-esquina-01.png" alt="" class="hero__floral hero__floral--top reveal" data-reveal>
+    <img src="assets/flor-esquina-02.png" alt="" class="hero__floral hero__floral--bottom reveal" data-reveal>
+
+    <div class="hero__content">
+      <p class="eyebrow reveal" data-reveal>Nos casamos</p>
+
+      <h1 class="hero__names reveal" data-reveal>
+        <span>Camila</span>
+        <span class="hero__amp">&amp;</span>
+        <span>Andrés</span>
+      </h1>
+
+      <p class="hero__date reveal" data-reveal>14 · marzo · 2027</p>
+
+      <!-- Contador regresivo -->
+      <div class="countdown reveal" data-reveal aria-live="polite">
+        <div class="countdown__item">
+          <span class="countdown__number" id="cd-days">00</span>
+          <span class="countdown__label">Días</span>
+        </div>
+        <div class="countdown__item">
+          <span class="countdown__number" id="cd-hours">00</span>
+          <span class="countdown__label">Horas</span>
+        </div>
+        <div class="countdown__item">
+          <span class="countdown__number" id="cd-minutes">00</span>
+          <span class="countdown__label">Min</span>
+        </div>
+        <div class="countdown__item">
+          <span class="countdown__number" id="cd-seconds">00</span>
+          <span class="countdown__label">Seg</span>
+        </div>
+      </div>
+    </div>
+
+    <a href="#historia" class="scroll-cue" aria-label="Desplázate para ver más">
+      <span></span>
+    </a>
+  </section>
+
+  <!-- Divisor ornamental (motivo de línea botánica que se dibuja al hacer scroll) -->
+  <div class="divider reveal" data-reveal>
+    <img src="assets/flor-divisor.png" alt="" class="divider__img">
+  </div>
+
+  <!-- ============ FRASE / HISTORIA ============ -->
+  <section class="story" id="historia">
+    <img src="assets/flor-divisor.png" alt="" class="story__floral reveal" data-reveal>
+    <p class="story__quote reveal" data-reveal>
+      “Dos caminos que se encuentran, un mismo destino: crecer juntos, reír siempre y amarnos sin medida.”
+    </p>
+    <p class="story__signature reveal" data-reveal>— Camila &amp; Andrés</p>
+  </section>
+
+  <div class="divider reveal" data-reveal>
+    <img src="assets/flor-divisor.png" alt="" class="divider__img">
+  </div>
+
+  <!-- ============ UBICACIÓN & CRONOGRAMA ============ -->
+  <section class="itinerary" id="ubicacion">
+    <h2 class="section-title reveal" data-reveal>Celebración</h2>
+    <p class="section-subtitle reveal" data-reveal>Así viviremos este día juntos</p>
+
+    <!-- Tarjeta: Ceremonia -->
+    <article class="event-card reveal" data-reveal>
+      <span class="event-card__tag">01 — Ceremonia</span>
+      <h3 class="event-card__title">Parroquia Nuestra Señora del Rosario</h3>
+      <p class="event-card__time">4:00 PM</p>
+      <p class="event-card__address">Cra. 43A #10-12, El Poblado, Medellín</p>
+      <div class="event-card__actions">
+        <a class="btn btn--outline" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&query=Parroquia+Nuestra+Se%C3%B1ora+del+Rosario+El+Poblado+Medell%C3%ADn">
+          <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7.6 2 4 5.6 4 10c0 5.4 7 11.6 7.3 11.9.2.1.4.2.7.2s.5-.1.7-.2C13 21.6 20 15.4 20 10c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+          Cómo llegar
+        </a>
+      </div>
+    </article>
+
+    <!-- Tarjeta: Recepción -->
+    <article class="event-card reveal" data-reveal>
+      <span class="event-card__tag">02 — Recepción</span>
+      <h3 class="event-card__title">Hacienda El Encanto</h3>
+      <p class="event-card__time">6:30 PM</p>
+      <p class="event-card__address">Km 3 Vía Las Palmas, Envigado</p>
+      <div class="event-card__actions">
+        <a class="btn btn--outline" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&query=Hacienda+El+Encanto+V%C3%ADa+Las+Palmas+Envigado">
+          <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7.6 2 4 5.6 4 10c0 5.4 7 11.6 7.3 11.9.2.1.4.2.7.2s.5-.1.7-.2C13 21.6 20 15.4 20 10c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+          Google Maps
+        </a>
+        <a class="btn btn--ghost" target="_blank" rel="noopener"
+           href="https://waze.com/ul?q=Hacienda%20El%20Encanto%20Via%20Las%20Palmas%20Envigado&navigate=yes">
+          Waze
+        </a>
+      </div>
+    </article>
+  </section>
+
+  <div class="divider reveal" data-reveal>
+    <img src="assets/flor-divisor.png" alt="" class="divider__img">
+  </div>
+
+  <!-- ============ CÓDIGO DE VESTIMENTA ============ -->
+  <section class="dresscode" id="vestimenta">
+    <h2 class="section-title reveal" data-reveal>Código de vestimenta</h2>
+    <p class="dresscode__type reveal" data-reveal>Formal / Etiqueta rigurosa</p>
+    <p class="dresscode__note reveal" data-reveal>Sugerimos evitar el blanco, ivory y verde militar, reservados para la novia.</p>
+
+    <div class="palette reveal" data-reveal>
+      <span class="palette__dot" style="--dot:#3B3159;" title="Ciruela"></span>
+      <span class="palette__dot" style="--dot:#7A5FA3;" title="Morado"></span>
+      <span class="palette__dot" style="--dot:#93A7C9;" title="Azul lila"></span>
+      <span class="palette__dot" style="--dot:#4F8B87;" title="Verde azulado"></span>
+      <span class="palette__dot" style="--dot:#D9CFEA;" title="Lavanda claro"></span>
+    </div>
+  </section>
+
+  <div class="divider reveal" data-reveal>
+    <img src="assets/flor-divisor.png" alt="" class="divider__img">
+  </div>
+
+  <!-- ============ REGALOS ============ -->
+  <section class="gifts" id="regalos">
+    <h2 class="section-title reveal" data-reveal>Regalos</h2>
+    <p class="section-subtitle reveal" data-reveal>Tu presencia es nuestro mejor regalo. Si deseas tener un detalle con nosotros:</p>
+
+    <div class="gift-card reveal" data-reveal>
+      <h3 class="gift-card__title">Lluvia de sobres</h3>
+      <p class="gift-card__text">Bancolombia — Ahorros</p>
+      <p class="gift-card__text">No. de cuenta: 000-000000-00</p>
+      <p class="gift-card__text">A nombre de: Camila &amp; Andrés</p>
+    </div>
+
+    <a href="#" class="btn btn--outline reveal" data-reveal target="_blank" rel="noopener">
+      Ver mesa de regalos
+    </a>
+  </section>
+
+  <div class="divider reveal" data-reveal>
+    <img src="assets/flor-divisor.png" alt="" class="divider__img">
+  </div>
+
+  <!-- ============ RSVP ============ -->
+  <section class="rsvp" id="rsvp">
+    <img src="assets/flor-divisor.png" alt="" class="rsvp__floral reveal" data-reveal>
+    <h2 class="section-title reveal" data-reveal>Confirmar asistencia</h2>
+    <p class="section-subtitle reveal" data-reveal>Por favor confírmanos antes del 14 de febrero de 2027</p>
+
+    <form class="rsvp-form reveal" data-reveal id="rsvp-form">
+      <div class="field">
+        <label for="guest-name">Nombre completo</label>
+        <input type="text" id="guest-name" name="guest-name" placeholder="¿Cómo te llamas?" required>
+      </div>
+
+      <div class="field">
+        <label>¿Asistirás?</label>
+        <div class="radio-group">
+          <label class="radio-pill">
+            <input type="radio" name="attendance" value="Sí, asistiré" required>
+            <span>Sí, asistiré</span>
+          </label>
+          <label class="radio-pill">
+            <input type="radio" name="attendance" value="No podré asistir" required>
+            <span>No podré</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="guest-song">Petición musical o mensaje (opcional)</label>
+        <textarea id="guest-song" name="guest-song" rows="3" placeholder="Una canción que no puede faltar, o un mensaje para nosotros"></textarea>
+      </div>
+
+      <button type="submit" class="btn btn--primary btn--full">
+        Confirmar asistencia
+      </button>
+      <p class="rsvp-hint">Se abrirá WhatsApp con tu respuesta lista para enviar</p>
+    </form>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <p class="footer__names">Camila &amp; Andrés</p>
+    <p class="footer__date">14 · 03 · 2027</p>
+  </footer>
+
+</div><!-- /.page-frame -->
+
+<!-- ============ BARRA FLOTANTE DE ACCIONES ============ -->
+<nav class="float-bar" aria-label="Acciones rápidas">
+  <button type="button" class="float-btn" id="music-toggle" aria-pressed="false" aria-label="Reproducir música">
+    <svg class="float-btn__icon icon-note" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M9 18V5l12-2v13" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.6" fill="none"/>
+      <circle cx="18" cy="16" r="3" stroke="currentColor" stroke-width="1.6" fill="none"/>
+    </svg>
+  </button>
+
+  <a href="#ubicacion" class="float-btn" aria-label="Ver ubicación">
+    <svg class="float-btn__icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 2C7.6 2 4 5.6 4 10c0 5.4 7 11.6 7.3 11.9.2.1.4.2.7.2s.5-.1.7-.2C13 21.6 20 15.4 20 10c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" fill="currentColor"/>
+    </svg>
+  </a>
+
+  <a href="#rsvp" class="float-btn" aria-label="Ir a confirmar asistencia">
+    <svg class="float-btn__icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M4 4h16v14H7l-3 3V4z" stroke="currentColor" stroke-width="1.6" fill="none" stroke-linejoin="round"/>
+      <path d="M8 9h8M8 13h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </svg>
+  </a>
+</nav>
+
+<!-- Audio de fondo -->
+<audio id="bg-audio" loop preload="none">
+  <source src="assets/cancion.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>

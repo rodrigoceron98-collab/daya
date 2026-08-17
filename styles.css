@@ -1,0 +1,669 @@
+/* ==========================================================================
+   INVITACIÓN DE BODA — Camila & Andrés
+   Mobile-first. Paleta botánica: verde bosque, ivory, terracota y dorado.
+   ========================================================================== */
+
+/* ---------- 1. VARIABLES GLOBALES ---------- */
+:root {
+  /* Paleta — Garden Party: morados, azules y verde-azulados
+     (pensada para acompañar tus acuarelas de flores silvestres) */
+  --color-ink: #3B3159;          /* ciruela oscuro — hero, textos fuertes */
+  --color-plum-light: #5D4E82;
+  --color-ivory: #FAF8F5;        /* fondo cálido casi blanco, resalta la acuarela */
+  --color-ivory-deep: #F0ECF5;   /* tarjetas / bloques, con un leve tinte lila */
+  --color-plum: #7A5FA3;         /* morado principal (botones, tags, títulos) */
+  --color-teal: #4F8B87;         /* verde azulado (acento secundario) */
+  --color-lilac: #93A7C9;        /* azul-lila suave (líneas y detalles finos) */
+  --color-text: #362F49;         /* texto principal, ciruela casi negro */
+  --color-text-soft: #766e8a;    /* texto secundario */
+  --color-white: #FFFFFF;
+
+  /* Tipografía */
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'Montserrat', sans-serif;
+
+  /* Ritmo / espaciado */
+  --section-pad-y: 5.5rem;
+  --section-pad-x: 1.75rem;
+  --radius-md: 4px;
+  --radius-lg: 18px;
+
+  /* Movimiento */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur: 0.9s;
+}
+
+/* ---------- 2. RESET BÁSICO ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; text-decoration: none; }
+
+button { font-family: inherit; cursor: pointer; }
+
+/* Respeta preferencia de movimiento reducido */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---------- 3. FRAME DE PÁGINA ----------
+   En móvil ocupa toda la pantalla. En pantallas grandes se muestra
+   como una tarjeta centrada (evoca el formato de invitación física). */
+.page-frame {
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--color-ivory);
+  position: relative;
+  overflow: hidden;
+}
+
+@media (min-width: 560px) {
+  body { padding: 2.5rem 0; }
+  .page-frame {
+    border-radius: 22px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+  }
+}
+
+/* ---------- 4. UTILIDADES DE TEXTO ---------- */
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-align: center;
+  color: var(--color-ink);
+  letter-spacing: 0.01em;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-soft);
+  margin-top: 0.6rem;
+  line-height: 1.6;
+}
+
+/* ---------- 5. HERO ---------- */
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-white);
+  padding: 2rem 1.5rem;
+  overflow: hidden;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-ink); /* fallback mientras carga la imagen */
+  transform: scale(1.06);
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(24, 30, 22, 0.55) 0%, rgba(24, 30, 22, 0.35) 45%, rgba(24, 30, 22, 0.75) 100%);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.hero .eyebrow {
+  color: var(--color-lilac);
+}
+
+.hero__names {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(3rem, 15vw, 4.2rem);
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.hero__amp {
+  font-style: italic;
+  font-size: 0.5em;
+  color: var(--color-lilac);
+  margin: 0.15em 0;
+}
+
+.hero__date {
+  font-size: 0.85rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Contador */
+.countdown {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.countdown__item {
+  width: 62px;
+  padding: 0.7rem 0;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  backdrop-filter: blur(6px);
+}
+
+.countdown__number {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.countdown__label {
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Indicador de scroll */
+.scroll-cue {
+  position: absolute;
+  bottom: 1.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 22px;
+  height: 34px;
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+}
+
+.scroll-cue span {
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--color-lilac);
+  animation: scrollCue 1.8s ease-in-out infinite;
+}
+
+@keyframes scrollCue {
+  0%   { top: 6px; opacity: 1; }
+  70%  { top: 20px; opacity: 0; }
+  100% { top: 6px; opacity: 0; }
+}
+
+/* ---------- 6. DIVISOR FLORAL (elemento de firma) ----------
+   Un pequeño ramo de acuarela (PNG con fondo transparente, hecho por ti
+   en Illustrator/Photoshop) que aparece con un fundido + deslizamiento
+   suave cada vez que entra en el viewport. Ver README.md para las
+   medidas exactas de "flor-divisor.png". */
+.divider {
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.divider__img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+}
+
+/* ---------- 6.1 ILUSTRACIONES FLORALES (esquinas, acentos) ----------
+   Imágenes decorativas posicionadas de forma absoluta. Todas usan
+   archivos PNG con fondo transparente que tú diseñas. */
+.hero__floral {
+  position: absolute;
+  z-index: 2;
+  width: 42%;
+  max-width: 220px;
+  height: auto;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 1.2s var(--ease) 0.3s, transform 1.2s var(--ease) 0.3s;
+}
+
+.hero__floral--top {
+  top: -1rem;
+  left: -1.5rem;
+  transform: translateY(-14px);
+}
+
+.hero__floral--bottom {
+  bottom: -1rem;
+  right: -1.5rem;
+  transform: translateY(14px) rotate(180deg);
+}
+
+.hero__floral.in-view { opacity: 1; transform: translateY(0); }
+.hero__floral--bottom.in-view { transform: rotate(180deg); }
+
+.rsvp__floral {
+  display: block;
+  width: 140px;
+  height: auto;
+  margin: 0 auto 0.5rem;
+}
+
+.story__floral {
+  display: block;
+  width: 90px;
+  height: auto;
+  margin: 0 auto 1rem;
+}
+
+/* ---------- 7. REVEAL AL HACER SCROLL ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+
+.reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Escalonado sutil dentro de una misma sección */
+.reveal:nth-child(2) { transition-delay: 0.08s; }
+.reveal:nth-child(3) { transition-delay: 0.16s; }
+.reveal:nth-child(4) { transition-delay: 0.24s; }
+
+/* ---------- 8. SECCIONES GENERALES ---------- */
+section {
+  padding: var(--section-pad-y) var(--section-pad-x);
+}
+
+/* ---------- 9. HISTORIA ---------- */
+.story {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 2.5rem;
+}
+
+.story__quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: var(--color-ink);
+}
+
+.story__signature {
+  margin-top: 1.25rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-plum);
+}
+
+/* ---------- 10. ITINERARIO / UBICACIÓN ---------- */
+.itinerary { padding-top: 1rem; }
+
+.event-card {
+  margin-top: 2rem;
+  padding: 1.75rem 1.5rem;
+  background: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 12px 30px rgba(47, 59, 44, 0.08);
+  border: 1px solid rgba(201, 167, 94, 0.25);
+}
+
+.event-card__tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-plum);
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.event-card__title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  line-height: 1.25;
+}
+
+.event-card__time {
+  margin-top: 0.4rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text);
+}
+
+.event-card__address {
+  margin-top: 0.2rem;
+  font-size: 0.82rem;
+  color: var(--color-text-soft);
+  line-height: 1.5;
+}
+
+.event-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1.25rem;
+}
+
+/* ---------- 11. BOTONES ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.3rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: transform 0.25s var(--ease), background 0.25s ease, color 0.25s ease;
+}
+
+.btn:active { transform: scale(0.96); }
+
+.btn--primary {
+  background: var(--color-ink);
+  color: var(--color-white);
+}
+
+.btn--outline {
+  background: transparent;
+  border-color: var(--color-ink);
+  color: var(--color-ink);
+}
+
+.btn--ghost {
+  background: var(--color-ivory-deep);
+  color: var(--color-text);
+}
+
+.btn--full { width: 100%; padding: 0.9rem 1.3rem; }
+
+.btn__icon {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+}
+
+/* ---------- 12. DRESS CODE ---------- */
+.dresscode { text-align: center; }
+
+.dresscode__type {
+  margin-top: 0.5rem;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.3rem;
+  color: var(--color-plum);
+}
+
+.dresscode__note {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--color-text-soft);
+  line-height: 1.6;
+  max-width: 30ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.palette {
+  display: flex;
+  justify-content: center;
+  gap: 0.85rem;
+  margin-top: 1.75rem;
+}
+
+.palette__dot {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--dot);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15), inset 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+/* ---------- 13. REGALOS ---------- */
+.gifts { text-align: center; }
+
+.gift-card {
+  margin-top: 1.75rem;
+  padding: 1.5rem;
+  background: var(--color-ivory-deep);
+  border-radius: var(--radius-lg);
+}
+
+.gift-card__title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--color-ink);
+  margin-bottom: 0.5rem;
+}
+
+.gift-card__text {
+  font-size: 0.82rem;
+  color: var(--color-text-soft);
+  line-height: 1.6;
+}
+
+.gifts .btn { margin-top: 1.5rem; }
+
+/* ---------- 14. RSVP ---------- */
+.rsvp { padding-top: 1rem; }
+
+.rsvp-form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.field label {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.field input[type="text"],
+.field textarea {
+  border: 1px solid rgba(47, 59, 44, 0.25);
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-text);
+  resize: vertical;
+}
+
+.field input[type="text"]:focus,
+.field textarea:focus {
+  outline: 2px solid var(--color-plum);
+  outline-offset: 1px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.radio-pill {
+  flex: 1;
+  position: relative;
+}
+
+.radio-pill input {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  cursor: pointer;
+}
+
+.radio-pill span {
+  display: block;
+  text-align: center;
+  padding: 0.75rem 0.5rem;
+  border: 1px solid rgba(47, 59, 44, 0.25);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text-soft);
+  transition: all 0.2s ease;
+}
+
+.radio-pill input:checked + span {
+  background: var(--color-ink);
+  border-color: var(--color-ink);
+  color: var(--color-white);
+}
+
+.radio-pill input:focus-visible + span {
+  outline: 2px solid var(--color-plum);
+  outline-offset: 2px;
+}
+
+.rsvp-hint {
+  text-align: center;
+  font-size: 0.72rem;
+  color: var(--color-text-soft);
+  margin-top: -0.5rem;
+}
+
+/* ---------- 15. FOOTER ---------- */
+.footer {
+  text-align: center;
+  padding: 3rem 1.5rem 6rem;
+  background: var(--color-ink);
+  color: var(--color-white);
+}
+
+.footer__names {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.6rem;
+}
+
+.footer__date {
+  margin-top: 0.4rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  color: var(--color-lilac);
+}
+
+/* ---------- 16. BARRA FLOTANTE DE ACCIONES ---------- */
+.float-bar {
+  position: fixed;
+  left: 50%;
+  bottom: 1.25rem;
+  transform: translateX(-50%);
+  z-index: 50;
+  display: flex;
+  gap: 0.6rem;
+  padding: 0.5rem;
+  background: rgba(47, 59, 44, 0.92);
+  backdrop-filter: blur(10px);
+  border-radius: 999px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+.float-btn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  color: var(--color-ivory);
+  transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.float-btn:active { transform: scale(0.92); }
+
+.float-btn__icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Estado activo del botón de música (nota girando) */
+#music-toggle[aria-pressed="true"] {
+  background: var(--color-plum);
+  color: var(--color-white);
+}
+
+#music-toggle[aria-pressed="true"] .icon-note {
+  animation: spin 3.5s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ---------- 17. AJUSTES PARA PANTALLAS MÁS ALTAS (tablets) ---------- */
+@media (min-width: 400px) {
+  .countdown__item { width: 68px; }
+}
