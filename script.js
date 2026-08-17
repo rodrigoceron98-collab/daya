@@ -1,5 +1,6 @@
 const CONFIG = {
-  eventDate: "2027-03-14T16:00:00",
+  // Fecha ajustada: 11 de Octubre de 2026 a las 15:00 (3:00 PM)
+  eventDate: "2026-10-11T15:00:00",
 };
 
 function initCountdown() {
@@ -37,7 +38,7 @@ function initCountdown() {
 }
 
 function initScrollReveal() {
-  const targets = document.querySelectorAll("[data-reveal], .divider, .hero__floral");
+  const targets = document.querySelectorAll("[data-reveal]");
   if (!("IntersectionObserver" in window)) {
     targets.forEach((el) => el.classList.add("in-view"));
     return;
@@ -49,7 +50,7 @@ function initScrollReveal() {
         obs.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.2, rootMargin: "0px 0px -8% 0px" });
+  }, { threshold: 0.15, rootMargin: "0px 0px -8% 0px" });
 
   targets.forEach((el) => observer.observe(el));
 }
@@ -61,7 +62,6 @@ function initMusicToggle() {
 
   let isPlaying = false;
   
-  // Solución para móviles: intentar reproducir al primer clic en la pantalla
   document.body.addEventListener('click', function initAudio() {
     if(!isPlaying) {
       audio.play().then(() => {
@@ -73,7 +73,7 @@ function initMusicToggle() {
   }, { once: true });
 
   button.addEventListener("click", (e) => {
-    e.stopPropagation(); // Evita conflictos con el clic del body
+    e.stopPropagation();
     if (isPlaying) {
       audio.pause();
       isPlaying = false;
@@ -92,7 +92,6 @@ function initCarousel() {
   const indicatorsContainer = document.getElementById('carousel-indicators');
   let currentSlide = 0;
   
-  // Crear los puntitos indicadores
   slides.forEach((_, index) => {
     const dot = document.createElement('div');
     dot.classList.add('carousel__dot');
@@ -112,7 +111,6 @@ function initCarousel() {
     dots[currentSlide].classList.add('active');
   }
   
-  // Cambiar foto cada 3 segundos (3000 ms)
   setInterval(nextSlide, 3000);
 }
 
