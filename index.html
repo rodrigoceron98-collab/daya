@@ -12,17 +12,15 @@
 <body>
 
 <div class="page-frame">
-  <!-- HERO / PORTADA -->
   <section class="hero" id="hero">
     <div class="hero__bg" style="background-image: url('./assets/fondo-hero.jpg');"></div>
     <div class="hero__overlay"></div>
 
     <div class="hero__content">
-      <!-- Frase dividida en dos renglones -->
       <p class="intro-text reveal" data-reveal>Tenemos el honor de invitarte<br>a nuestra boda</p>
       <h1 class="hero__names reveal" data-reveal>
         <span>Daya</span>
-        <span class="hero__amp">&amp;</span>
+        <span class="hero__amp">&</span>
         <span>Rodri</span>
       </h1>
       <p class="hero__date reveal" data-reveal>11 · octubre · 2026</p>
@@ -34,7 +32,6 @@
         <div class="countdown__item"><span class="countdown__number" id="cd-seconds">00</span><span class="countdown__label">Seg</span></div>
       </div>
       
-      <!-- Indicación de música con ícono blanco SVG -->
       <p class="music-hint reveal" data-reveal>
         <svg class="music-icon-white" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M9 18V5l12-2v13M9 9l12-2M6 15a3 3 0 1 0 3 3v-3H6zm12-2a3 3 0 1 0 3 3v-3h-3z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -42,10 +39,15 @@
         Presiona el botón flotante para escuchar nuestra canción<br>
         <em>(Lo arriesgo todo - Bruno Mars)</em>
       </p>
+
+      <div class="scroll-indicator reveal" data-reveal>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M7 10l5 5 5-5M7 15l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
     </div>
   </section>
 
-  <!-- VERSÍCULO -->
   <section class="verse-section" id="versiculo">
     <p class="verse-quote reveal" data-reveal>
       “Mejor dos que uno solo, pues tienen mejor recompensa por su trabajo. Porque si caen, el uno levantará a su compañero. Pero, ¡ay del que cae cuando no hay otro que lo levante!”
@@ -53,7 +55,6 @@
     <p class="verse-ref reveal" data-reveal>Eclesiastés 4:9-10 RVA2015</p>
   </section>
 
-  <!-- NOSOTROS (Carrusel) -->
   <section class="about" id="nosotros">
     <h2 class="section-title reveal" data-reveal>Nosotros</h2>
     
@@ -69,7 +70,6 @@
     </div>
   </section>
 
-  <!-- SECCIÓN DOS COLUMNAS (Foto y Texto de Historia) -->
   <section class="two-columns reveal" data-reveal id="historia-dios">
     <div class="col-img">
       <img src="./assets/foto-especial.jpg" alt="Daya y Rodri juntos">
@@ -79,7 +79,6 @@
     </div>
   </section>
 
-  <!-- UBICACIÓN & CRONOGRAMA (Fondo Oscuro) -->
   <section class="itinerary section-dark" id="ubicacion">
     <h2 class="section-title reveal" data-reveal>Reserva la fecha</h2>
     <p class="section-subtitle reveal" data-reveal>Octubre 11 / 2026</p>
@@ -99,7 +98,6 @@
       </div>
 
       <div class="event-card__actions">
-        <!-- ENLACE DE GOOGLE MAPS -->
         <a class="btn btn--outline" target="_blank" href="https://www.google.com/maps/place/6%C2%B010'27.0%22N+75%C2%B023'23.2%22W/@6.174152,-75.3923609,17z/data=!3m1!4b1!4m4!3m3!8m2!3d6.174152!4d-75.389786?entry=ttu&g_ep=EgoyMDI2MDgxMi4wIKXMDSoASAFQAw%3D%3D">
           📍 Ver en Google Maps
         </a>
@@ -107,7 +105,6 @@
     </article>
   </section>
 
-  <!-- CÓDIGO DE VESTIMENTA (Fondo Oscuro) -->
   <section class="dresscode section-dark" id="vestimenta">
     <h2 class="section-title reveal" data-reveal>Dress Code</h2>
     <p class="dresscode__type reveal" data-reveal>Etiqueta Formal</p>
@@ -127,7 +124,6 @@
     </div>
   </section>
 
-  <!-- RECOMENDACIONES -->
   <section class="recommendations" id="recomendaciones">
     <h2 class="section-title reveal" data-reveal>Recomendaciones generales</h2>
     
@@ -136,7 +132,7 @@
         <p><strong>Llegar a las 2:30 PM</strong> para tener tiempo de acomodarnos en orden antes de la ceremonia.</p>
       </div>
       <div class="rec-item">
-        <p>Si bien amamos a los niños, celebraremos un <strong>evento solo para adultos</strong>. Para mantener un ambiente tranquilo y cómodo durante la ceremonia y la recepción, te agradecemos no traer niños. Apreciamos mucho tu comprensión.</p>
+        <p>Si bien amamos a los niños, celebraremos un evento solo para adultos por motivos de capacidad del lugar y logística. Para mantener un ambiente tranquilo y cómodo durante la ceremonia y la recepción, te agradecemos no traer niños. Apreciamos mucho tu comprensión.</p>
       </div>
       <div class="rec-item">
         <p>Te sugerimos usar el celular en <strong>modo vibración</strong> para no interrumpir la ceremonia.</p>
@@ -144,9 +140,7 @@
     </div>
   </section>
 
-  <!-- REGALOS (Fondo Oscuro) -->
   <section class="gifts section-dark" id="regalos">
-    <!-- ÍCONO DE SOBRE AQUÍ -->
     <img src="./assets/icono-sobre.png" alt="Lluvia de sobres" class="section-icon reveal" data-reveal>
     
     <h2 class="section-title reveal" data-reveal>Sugerencia de regalos</h2>
@@ -158,9 +152,7 @@
     </div>
   </section>
 
-  <!-- RSVP GOOGLE FORMS -->
   <section class="rsvp" id="rsvp">
-    <!-- ÍCONO DE CHECK AQUÍ -->
     <img src="./assets/icono-check.png" alt="Confirmar asistencia" class="section-icon reveal" data-reveal>
     
     <h2 class="section-title reveal" data-reveal>Confirma tu asistencia</h2>
@@ -169,14 +161,22 @@
       <strong>Confirmar antes del 28 de agosto.</strong>
     </p>
     <br>
-    <!-- ENLACE DE GOOGLE FORMS -->
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfPgsiU5JO_Hs8aOR4QTaLIZDBZ7ueF2aR2mOUhOQvYa3bJAQ/viewform" class="btn btn--primary btn--full reveal" data-reveal target="_blank">
       Llenar formulario
     </a>
   </section>
 
+  <section class="contact-section" id="contacto">
+    <h2 class="section-title reveal" data-reveal>Contacto</h2>
+    <p class="section-subtitle reveal" data-reveal>¿Necesitas más información?<br>Escríbenos y con mucho gusto te ayudamos</p>
+    <br>
+    <a href="https://wa.me/573136094524?text=%C2%A1Hola!%20Tengo%20una%20pregunta%20sobre%20su%20boda." class="btn btn--whatsapp btn--full reveal" data-reveal target="_blank">
+      💬 Enviar mensaje
+    </a>
+  </section>
+
   <footer class="footer">
-    <p class="footer__names">Daya &amp; Rodri</p>
+    <p class="footer__names">Daya & Rodri</p>
   </footer>
 </div>
 
@@ -186,7 +186,6 @@
   </button>
 </nav>
 
-<!-- Audio -->
 <audio id="bg-audio" loop preload="auto">
   <source src="./assets/cancion.mp3" type="audio/mpeg">
 </audio>
