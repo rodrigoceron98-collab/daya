@@ -12,11 +12,13 @@
 <body>
 
 <div class="page-frame">
+  <!-- HERO / PORTADA -->
   <section class="hero" id="hero">
     <div class="hero__bg" style="background-image: url('./assets/fondo-hero.jpg');"></div>
     <div class="hero__overlay"></div>
 
     <div class="hero__content">
+      <!-- Frase dividida en dos renglones -->
       <p class="intro-text reveal" data-reveal>Tenemos el honor de invitarte<br>a nuestra boda</p>
       <h1 class="hero__names reveal" data-reveal>
         <span>Daya</span>
@@ -32,6 +34,7 @@
         <div class="countdown__item"><span class="countdown__number" id="cd-seconds">00</span><span class="countdown__label">Seg</span></div>
       </div>
       
+      <!-- Indicación de música con ícono blanco SVG -->
       <p class="music-hint reveal" data-reveal>
         <svg class="music-icon-white" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M9 18V5l12-2v13M9 9l12-2M6 15a3 3 0 1 0 3 3v-3H6zm12-2a3 3 0 1 0 3 3v-3h-3z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -40,6 +43,7 @@
         <em>(Lo arriesgo todo - Bruno Mars)</em>
       </p>
 
+      <!-- Flechas indicadoras de scroll -->
       <div class="scroll-indicator reveal" data-reveal>
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M7 10l5 5 5-5M7 15l5 5 5-5" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -48,6 +52,7 @@
     </div>
   </section>
 
+  <!-- VERSÍCULO -->
   <section class="verse-section" id="versiculo">
     <p class="verse-quote reveal" data-reveal>
       “Mejor dos que uno solo, pues tienen mejor recompensa por su trabajo. Porque si caen, el uno levantará a su compañero. Pero, ¡ay del que cae cuando no hay otro que lo levante!”
@@ -55,6 +60,7 @@
     <p class="verse-ref reveal" data-reveal>Eclesiastés 4:9-10 RVA2015</p>
   </section>
 
+  <!-- NOSOTROS (Carrusel) -->
   <section class="about" id="nosotros">
     <h2 class="section-title reveal" data-reveal>Nosotros</h2>
     
@@ -70,6 +76,7 @@
     </div>
   </section>
 
+  <!-- SECCIÓN DOS COLUMNAS (Foto y Texto de Historia) -->
   <section class="two-columns reveal" data-reveal id="historia-dios">
     <div class="col-img">
       <img src="./assets/foto-especial.jpg" alt="Daya y Rodri juntos">
@@ -79,6 +86,7 @@
     </div>
   </section>
 
+  <!-- UBICACIÓN & CRONOGRAMA (Fondo Oscuro) -->
   <section class="itinerary section-dark" id="ubicacion">
     <h2 class="section-title reveal" data-reveal>Reserva la fecha</h2>
     <p class="section-subtitle reveal" data-reveal>Octubre 11 / 2026</p>
@@ -98,6 +106,7 @@
       </div>
 
       <div class="event-card__actions">
+        <!-- ENLACE DE GOOGLE MAPS -->
         <a class="btn btn--outline" target="_blank" href="https://www.google.com/maps/place/6%C2%B010'27.0%22N+75%C2%B023'23.2%22W/@6.174152,-75.3923609,17z/data=!3m1!4b1!4m4!3m3!8m2!3d6.174152!4d-75.389786?entry=ttu&g_ep=EgoyMDI2MDgxMi4wIKXMDSoASAFQAw%3D%3D">
           📍 Ver en Google Maps
         </a>
@@ -105,6 +114,7 @@
     </article>
   </section>
 
+  <!-- CÓDIGO DE VESTIMENTA (Fondo Oscuro) -->
   <section class="dresscode section-dark" id="vestimenta">
     <h2 class="section-title reveal" data-reveal>Dress Code</h2>
     <p class="dresscode__type reveal" data-reveal>Etiqueta Formal</p>
@@ -124,6 +134,7 @@
     </div>
   </section>
 
+  <!-- RECOMENDACIONES -->
   <section class="recommendations" id="recomendaciones">
     <h2 class="section-title reveal" data-reveal>Recomendaciones generales</h2>
     
@@ -140,7 +151,89 @@
     </div>
   </section>
 
+  <!-- NUEVA SECCIÓN: ITINERARIO BODA (Fondo Oscuro, Grid de 2x4) -->
+  <section class="wedding-itinerary section-dark" id="itinerario">
+    <h2 class="section-title reveal" data-reveal>Itinerario</h2>
+    <p class="section-subtitle reveal" data-reveal>Daya & Rodri — 11 de Octubre</p>
+
+    <div class="itinerary-grid reveal" data-reveal>
+      <!-- Cuadro 1 -->
+      <div class="itinerary-box">
+        <div class="itinerary-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+        </div>
+        <span class="itinerary-time">2:30 PM</span>
+        <h4 class="itinerary-name">LLEGADA DE INVITADOS</h4>
+      </div>
+
+      <!-- Cuadro 2 -->
+      <div class="itinerary-box">
+        <div class="itinerary-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"></path></svg>
+        </div>
+        <span class="itinerary-time">2:45 PM</span>
+        <h4 class="itinerary-name">ORACIÓN POR LAS SOLTERAS</h4>
+      </div>
+
+      <!-- Cuadro 3 -->
+      <div class="itinerary-box">
+        <div class="itinerary-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 3 0 3 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-3 0-3"></path></svg>
+        </div>
+        <span class="itinerary-time">3:00 PM</span>
+        <h4 class="itinerary-name">INICIO CEREMONIA</h4>
+      </div>
+
+      <!-- Cuadro 4 -->
+      <div class="itinerary-box">
+        <div class="itinerary-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        </div>
+        <span class="itinerary-time">4:40 PM</span>
+        <h4 class="itinerary-name">PALABRAS FAMILIA</h4>
+      </div>
+
+      <!-- Cuadro 5 -->
+      <div class="itinerary-box">
+        <div class="itinerary-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+        </div>
+        <span class="itinerary-time">5:00 PM</span>
+        <h4 class="itinerary-name">SESIÓN FOTOS NOVIOS</h4>
+      </div>
+
+      <!-- Cuadro 6 -->
+      <div class="itinerary-box">
+        <div class="itinerary-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+        </div>
+        <span class="itinerary-time">6:00 PM</span>
+        <h4 class="itinerary-name">CENA</h4>
+      </div>
+
+      <!-- Cuadro 7 -->
+      <div class="itinerary-box">
+        <div class="itinerary-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        </div>
+        <span class="itinerary-time">6:40 PM</span>
+        <h4 class="itinerary-name">MOMENTO ESPECIAL</h4>
+      </div>
+
+      <!-- Cuadro 8 -->
+      <div class="itinerary-box">
+        <div class="itinerary-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+        </div>
+        <span class="itinerary-time">7:10 PM</span>
+        <h4 class="itinerary-name">BRINDIS, TORTA Y FOTOS</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- REGALOS (Fondo Oscuro) -->
   <section class="gifts section-dark" id="regalos">
+    <!-- ÍCONO DE SOBRE -->
     <img src="./assets/icono-sobre.png" alt="Lluvia de sobres" class="section-icon reveal" data-reveal>
     
     <h2 class="section-title reveal" data-reveal>Sugerencia de regalos</h2>
@@ -152,7 +245,9 @@
     </div>
   </section>
 
+  <!-- RSVP GOOGLE FORMS -->
   <section class="rsvp" id="rsvp">
+    <!-- ÍCONO DE CHECK CON CLASE CORREGIDA -->
     <img src="./assets/icono-check.png" alt="Confirmar asistencia" class="section-icon-check reveal" data-reveal>
     
     <h2 class="section-title reveal" data-reveal>Confirma tu asistencia</h2>
@@ -161,11 +256,13 @@
       <strong>Confirmar antes del 28 de agosto.</strong>
     </p>
     <br>
+    <!-- ENLACE DE GOOGLE FORMS -->
     <a href="https://docs.google.com/forms/d/e/1FAIpQLSfPgsiU5JO_Hs8aOR4QTaLIZDBZ7ueF2aR2mOUhOQvYa3bJAQ/viewform" class="btn btn--primary btn--full reveal" data-reveal target="_blank">
       Llenar formulario
     </a>
   </section>
 
+  <!-- CONTACTO / WHATSAPP -->
   <section class="contact-section" id="contacto">
     <h2 class="section-title reveal" data-reveal>Contacto</h2>
     <p class="section-subtitle reveal" data-reveal>¿Necesitas más información?<br>Escríbenos y con mucho gusto te ayudamos</p>
@@ -186,6 +283,7 @@
   </button>
 </nav>
 
+<!-- Audio -->
 <audio id="bg-audio" loop preload="auto">
   <source src="./assets/cancion.mp3" type="audio/mpeg">
 </audio>
