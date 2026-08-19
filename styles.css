@@ -1,5 +1,5 @@
 :root {
-  --color-ink: #2C3B29;          /* Verde bosque muy oscuro */
+  --color-ink: #2C3B29;          /* Verde bosque muy oscuro / Fondo de secciones oscuras */
   --color-sage: #8A9A83;         /* Verde Salvia Pantone 5773C */
   --color-sage-light: #A5B39F;   
   --color-ivory: #FAF9F6;        /* Fondo base claro cálido */
@@ -176,12 +176,12 @@ section { padding: var(--section-pad-y) var(--section-pad-x); }
   line-height: 1.3;
 }
 
-/* --- BOTONES --- */
+/* --- BOTONES (Actualizados al verde oliva oscuro --color-ink) --- */
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; padding: 0.85rem 1.3rem; border-radius: 999px; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600; border: 1px solid transparent; transition: 0.25s; }
-.btn--primary { background: var(--color-sage); color: var(--color-white); }
+.btn--primary { background: var(--color-ink); color: var(--color-white); }
 .btn--outline { background: transparent; border-color: var(--color-sage); color: var(--color-sage); }
 .section-dark .btn--outline { border-color: var(--color-sage-light); color: var(--color-sage-light); }
-.btn--whatsapp { background: var(--color-sage); color: var(--color-white); }
+.btn--whatsapp { background: var(--color-ink); color: var(--color-white); }
 .btn--full { width: 100%; padding: 1rem 1.3rem; }
 
 /* --- DRESS CODE --- */
@@ -214,13 +214,13 @@ section { padding: var(--section-pad-y) var(--section-pad-x); }
 .rsvp { padding-top: 2rem; text-align: center;}
 .contact-section { padding-top: 2rem; text-align: center; }
 
-/* --- ESTILO PARA EL TEXTO FINAL LUXURY --- */
+/* --- ESTILO PARA EL TEXTO FINAL LUXURY (Ajustado al verde oscuro --color-ink) --- */
 .final-welcome {
   text-align: center;
   font-family: var(--font-display);
   font-style: italic;
   font-size: 2.5rem;
-  color: var(--color-sage);
+  color: var(--color-ink);
   padding: 1.5rem 1rem 0.5rem;
   letter-spacing: 0.02em;
   font-weight: 500;
