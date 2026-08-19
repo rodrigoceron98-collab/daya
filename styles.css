@@ -125,7 +125,7 @@ section { padding: var(--section-pad-y) var(--section-pad-x); }
 .schedule-item strong { color: var(--color-sage-light); }
 .event-card__actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-top: 1.25rem; }
 
-/* --- ESTILOS PARA LA NUEVA SECCIÓN: ITINERARIO GRID (2 columnas x 4 filas) --- */
+/* --- ESTILOS ITINERARIO GRID --- */
 .wedding-itinerary { padding-top: 3rem; padding-bottom: 3rem; }
 .itinerary-grid {
   display: grid;
@@ -214,8 +214,20 @@ section { padding: var(--section-pad-y) var(--section-pad-x); }
 /* --- RSVP Y CONTACTO --- */
 .rsvp { padding-top: 2rem; text-align: center;}
 .contact-section { padding-top: 2rem; text-align: center; }
-.footer { text-align: center; padding: 3rem 1.5rem 4rem; background: var(--color-ink); color: var(--color-white); border-top: 1px solid rgba(255, 255, 255, 0.1); }
-.footer__names { font-family: var(--font-display); font-style: italic; font-size: 1.6rem; color: var(--color-white); }
+
+/* --- ESTILO PARA EL TEXTO FINAL LUXURY --- */
+.final-welcome {
+  text-align: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 2rem;
+  color: var(--color-sage);
+  padding: 1.5rem 1rem 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.footer { text-align: center; padding: 2rem 1.5rem 4rem; background: var(--color-ivory); color: var(--color-ink); border-top: 1px solid rgba(138, 154, 131, 0.2); }
+.footer__names { font-family: var(--font-display); font-style: italic; font-size: 1.6rem; color: var(--color-ink); }
 
 /* --- BOTÓN DE MÚSICA FLOTANTE --- */
 .float-bar { position: fixed; left: 50%; bottom: 1.25rem; transform: translateX(-50%); z-index: 50; display: flex; gap: 0.6rem; padding: 0.5rem; background: rgba(44, 59, 41, 0.95); border-radius: 999px; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25); border: 1px solid rgba(255, 255, 255, 0.15); }
