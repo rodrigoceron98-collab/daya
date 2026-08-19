@@ -8,7 +8,6 @@
   --color-text: #414A3E;         /* Texto principal oscuro */
   --color-text-soft: #6D786A;    /* Texto secundario claro */
   --color-white: #FFFFFF;
-  --color-whatsapp: #25D366;     /* Color oficial WhatsApp */
 
   --font-display: 'Cormorant Garamond', serif;
   --font-body: 'Montserrat', sans-serif;
@@ -182,7 +181,7 @@ section { padding: var(--section-pad-y) var(--section-pad-x); }
 .btn--primary { background: var(--color-sage); color: var(--color-white); }
 .btn--outline { background: transparent; border-color: var(--color-sage); color: var(--color-sage); }
 .section-dark .btn--outline { border-color: var(--color-sage-light); color: var(--color-sage-light); }
-.btn--whatsapp { background: var(--color-whatsapp); color: var(--color-white); }
+.btn--whatsapp { background: var(--color-sage); color: var(--color-white); }
 .btn--full { width: 100%; padding: 1rem 1.3rem; }
 
 /* --- DRESS CODE --- */
@@ -220,10 +219,11 @@ section { padding: var(--section-pad-y) var(--section-pad-x); }
   text-align: center;
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: var(--color-sage);
   padding: 1.5rem 1rem 0.5rem;
   letter-spacing: 0.02em;
+  font-weight: 500;
 }
 
 .footer { text-align: center; padding: 2rem 1.5rem 4rem; background: var(--color-ivory); color: var(--color-ink); border-top: 1px solid rgba(138, 154, 131, 0.2); }
